@@ -1,4 +1,9 @@
 Tyhjätään vanhat ja kirjoitetaan tämä rivi zzz3:ssa
+<<<<<<< HEAD
 Lisätään rivi ja muokataan eri tavalla.
 Uusi rivi tännekin.
 .
+=======
+Lisätään rivi (täm jo vanha juttu, muokataan sitä)
+Ja vielä yksi rivi tähän
+>>>>>>> refs/remotes/origin/master
