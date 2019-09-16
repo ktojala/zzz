@@ -1,4 +1,4 @@
-User guideline
+## User guideline
 
 The following minimum actions are necessary to run the Tiralabra chess bot app with the Lichess.org application program interface (API). (See https://lichess.org/api for the full API Reference.)
 
@@ -7,9 +7,7 @@ The following minimum actions are necessary to run the Tiralabra chess bot app w
 3. Click “Generate a personal API token” at https://lichess.org/api#section/Authentication
 Now you have two options. You can play as a bot, as you will do with the Tiralabra chess bot app, or you can play as yourself. You cannot do the two with the same registered account.
 
-4a. You may first want to try Lichess chess as yourself. (If you want to get your chess bot playing, go directly to step 4b.) You can, for example, select the following options at https://lichess.org/account/oauth/token/create :
-
-
+4. You may first want to try Lichess chess as yourself. (If you want to get your chess bot playing, go directly to step 5.) You can, for example, select all but the last options at https://lichess.org/account/oauth/token/create.
 
 You will receive a confirmation email. After your confirmation, you will receive your token and find it at https://lichess.org/account/oauth/token.
 
@@ -21,17 +19,17 @@ $ curl https://lichess.org/api/account -H "Authorization: Bearer BQPxDrjq1vDqila
 
 should display your account information in JSON format, if you use your personal access token.
 
-4b. If you have played a single game as yourself and now want to try playing as a bot, as you will do with the chess bot app, you will have to DELETE your token at https://lichess.org/account/oauth/token and also close your account. You need to repeat steps 2 and 3. You need to register with a different username.
+5. If you have played a single game as yourself and now want to try playing as a bot, as you will do with the chess bot app, you will have to DELETE your token at https://lichess.org/account/oauth/token and also close your account. You need to repeat steps 2 and 3. You need to register with a different username.
 
 Create a new access token like in step 4a, but this time select at least the ‘Play as a bot’ option.
 
 You will receive a confirmation email. After your confirmation, you will receive your token and find it at https://lichess.org/account/oauth/token.
 
-5. Now you can try the Tiralabra chess bot. The first step is to replace <INSERT TOKEN HERE> in the App.java file with your personal API access token.
+6. Now you can try the Tiralabra chess bot. The first step is to replace <INSERT TOKEN HERE> in the App.java file with your personal API access token.
 
-6. One possible way to try the bot: after login, select “PLAY WITH THE COMPUTER” at https://lichess.org/. At command line, type ./gradlew build, then ./gradlew run.
+7. One possible way to try the bot: after login, select “PLAY WITH THE COMPUTER” at https://lichess.org/. At command line, type ./gradlew build, then ./gradlew run.
 
-7. Your chess bot will start playig with random moves, that is, very poorly. Your task is now to create a better bot, an A.I. bot!
+8. Your chess bot will start playig with random moves, that is, very poorly. Your task is now to create a better bot, an A.I. bot!
 
 
 
