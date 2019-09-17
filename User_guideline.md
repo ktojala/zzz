@@ -34,5 +34,5 @@ $ curl -d '' https://lichess.org/api/bot/account/upgrade -H "Authorization: Bear
 
 7. One possible way to use the bot: after login, select “PLAY WITH THE COMPUTER” at https://lichess.org/. Then choose which pieces you want to play. Finally, at the command line, type ./gradlew build, then ./gradlew run.
 
-8. Your chess bot will start playig with random moves, that is, very poorly. Your task is now to create a better bot, a real A.I. bot!
+8. Your chess bot will start playig with random moves, that is, very poorly. Your task is now to create a real A.I. bot!
 
