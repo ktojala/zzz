@@ -22,15 +22,15 @@ Now you can play chess games in different ways. You can also try direct communic
 
 $ curl https://lichess.org/api/account -H "Authorization: Bearer BQPxDrjq1vDqilaR"
 
-should display your account information in JSON format, if you use your personal access token.
+should display your account information in JSON format. (Replace the token above with your personal access token.)
 
 5. If you have not played a single game (as yourself) with your personal access token, the guidelines at https://lichess.org/api#operation/apiStreamEvent apply.
 
 If you have played even a single game as a player and now want to try playing as a bot, you will have to DELETE your token at https://lichess.org/account/oauth/token and also close your account. Then you need to repeat steps 2 and 3. You need to register with a new, different username. Then create a new access token, but this time select (at least) the ‘Play as a bot’ option. You will receive a confirmation email. After your confirmation, you will receive your token and find it at https://lichess.org/account/oauth/token. The you will upgrade your account to a bot:
 
-$ curl -d '' https://lichess.org/api/bot/account/upgrade -H "Authorization: Bearer <yourTokenHere>"
+$ curl -d '' https://lichess.org/api/bot/account/upgrade -H "Authorization: Bearer BQPxDrjq1vDqilaR"
 
-6. Now you can try the Tiralabra chess bot. The first step is to replace <INSERT TOKEN HERE> in the App.java file with your personal API access token.
+6. Now you can try the Tiralabra chess bot. The first step is to replace "INSERT TOKEN HERE" in the App.java file with your personal API access token.
 
 7. One possible way to use the bot: after login, select “PLAY WITH THE COMPUTER” at https://lichess.org/. Then choose which pieces you want to play. Finally, at the command line, type ./gradlew build, then ./gradlew run.
 
