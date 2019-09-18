@@ -5,5 +5,5 @@
 
 ## User guideline for beginners
 
-- [User guideline for beginners](https://github.com/TiraLabra/chess/blob/master/documentation/User_guideline.md)
+- [Beginner's guide for chess bot setup](https://github.com/TiraLabra/chess/blob/master/documentation/User_guideline.md)
 
