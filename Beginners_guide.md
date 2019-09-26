@@ -36,7 +36,7 @@ then if you inserted your token App.java *./gradlew run* or if you didn't *./gra
 
 XBoard is a graphical user interface chessboard for chess engines. Xboard can be connected to the tira chess engine.
 
-1. Download XBoard from  https://www.gnu.org/software/xboard/#download
+1. Download [XBoard](https://www.gnu.org/software/xboard/#download)
 
 One can download the tar.gz file of the latest stable version and uncompress it, for example, in the same directory where the chess folder is.
 
