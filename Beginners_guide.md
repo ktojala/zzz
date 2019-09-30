@@ -1,5 +1,12 @@
 # Beginner's guide for chess bot setup
 
+This template provides two ways for your bots to interact with other bots or players. You can either play online on [Lichess](https://lichess.org)
+or you can play locally using the program [XBoard](https://www.gnu.org/software/xboard/).
+
+Below you can find the instructions to configure your project to work with either of these options.
+
+## Playing on Lichess
+
 The following minimum actions are necessary to run the Tiralabra chess bot app with the Lichess.org application program interface (API). See [Lichess API](https://lichess.org/api) for the full API Reference. 
 
 By no means, this guideline will not replace the API Reference. We hope that this guideline will save your valuable time when getting started.
@@ -20,25 +27,34 @@ By no means, this guideline will not replace the API Reference. We hope that thi
 
 *curl -d '' https<span></span>://lichess.org/api/bot/account/upgrade -H "Authorization: Bearer INSERT YOUR TOKEN HERE"*
 
-6. Now you can try the Tiralabra chess bot. 
-You can replace "INSERT TOKEN HERE" in the App.java file with your personal API access token or you can pass token as a parameter..
+5. Select your way to pass your token to the Tiralabra chess bot. 
 
-7. One possible way to use the bot: after login, select “PLAY WITH THE COMPUTER” at https<span></span>://lichess.org/. 
+    a) you can pass token as a commandline parameter or
+    
+    b) you can supply the token via the LICHESS_TOKEN environment variable or
+    
+    c) you can create a "token.txt" file to resources-directory (it's in src/main). It won't go to GitHub because it is listed  in *.gitignore*.
+
+    d) (Not recommended) You can replace "PLEASE DON'T INSERT TOKEN HERE" in the App.java file with your personal API access token and risk that you accidently push it to GitHub
+
+**Note** Token given as a parameter or through an environment variable overrides any token in the token.txt file. 
+
+6. Now you can try the Tiralabra chess bot. One possible way to start the bot: after login, select “PLAY WITH THE COMPUTER” at https<span></span>://lichess.org/. 
 Then choose which pieces you want to play. Finally, at the command line, type *./gradlew build*, 
-then if you inserted your token App.java *./gradlew run* or if you didn't *./gradlew run --args=INSERT YOUR TOKEN HERE* .
+then if you inserted your token App.java *./gradlew run* or, if you didn't, *./gradlew run --args=INSERT YOUR TOKEN HERE* .
 
-8. Your chess bot will start playig with random moves, that is, very poorly. Your task is now to create a real A.I. bot!
+7. Your chess bot will start playig with random moves, that is, very poorly. Your task is now to create a real A.I. bot!
 
-**Note:** By default, program keeps running as it waits for new challenges from Lichess, to close the program use CTRL+C
+**Note:** By default, program keeps running as it waits for new challenges from Lichess. To close the program use CTRL+C.
 
 
 ## XBoard Setup
 
-XBoard is a graphical user interface chessboard for chess engines. Xboard can be connected to the tira chess engine.
+XBoard is a graphical user interface chessboard for chess engines. Xboard can be connected to your tira chess engine.
 
-1. Download [XBoard](https://www.gnu.org/software/xboard/#download)
+1. Download the tar.gz file of the latest stable version of [XBoard](https://www.gnu.org/software/xboard/#download)
 
-One can download the tar.gz file of the latest stable version and uncompress it, for example, in the same directory where the chess folder is.
+Uncompress it, for example, under the same directory where the chess directory is.
 
 $ tar xvzf xboard-4.9.0.tar.gz
 
@@ -46,24 +62,30 @@ $ tar xvzf xboard-4.9.0.tar.gz
 
 $ xboard
 
-3. Under Engine tab, select Edit Engine List..
+3. Make sure that you have a jar file for your engine
 
-4. Add the path to the chess engine's jar file in the list:
+$ ./gradlew build
+
+4. Under Engine tab, select Edit Engine List..
+
+5. Add the path of the chess engine's jar file in the list
 
 "tira-chess" -fcp "java -jar /home/local/..your path../chess/build/libs/chess-all.jar"
 
-You can give your title here, it does not have to be "tira-chess".
-The click 'commit changes' and 'OK'.
+You can replace "tira-chess" with any unique name.
+Then click 'commit changes' and 'OK'.
 
-5. Under Engine tab, select Load New 1st Engine..
+6. Under Engine tab, select Load New 1st Engine..
 
-Just select your engine and click 'OK'.
+Just select your engine from the list and click 'OK'.
 
-6. Make your first move (as white) and your engine should respond by its move.
+7. Make your first move (as white) and your engine should respond with its move.
 
-You can also select 'Machine White' under the Mode tab. In this case, your engine will play white and make its move first.
+You can also select 'Machine White' under the Mode tab. In this case, your engine will play white pieces and make its move first.
 
-7. When developing your AI engine, you may want to modify the way how XBoard communicates with your engine. Web page https://www.gnu.org/software/xboard/engine-intf.html has the details.
+With the "Two Machines" mode, you can also get two bots playing against each other.
+
+**Note:** When developing your AI engine, you may want to modify the way how XBoard communicates with your chess engine. The [Chess Engine Communication Protocol](https://www.gnu.org/software/xboard/engine-intf.html) has the details.
 
 
 
