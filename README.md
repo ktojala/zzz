@@ -38,3 +38,7 @@ Friday 10-16
 - [Sprint 1](https://helsinkifi-my.sharepoint.com/:w:/g/personal/jermusto_ad_helsinki_fi/EaCafe0NeQhIn9RvXX5NGdIBhEdWoSMhUK8QN81QgAOEiQ?e=uZb7Uu)
 - [Sprint 2](https://helsinkifi-my.sharepoint.com/:w:/g/personal/antlammi_ad_helsinki_fi/EZDDm5dJfnhEnIVKQ09PbmwBDXRmR4hKxA7fSKaOYJvkPg?e=a0EW2W)
 
+
+## Notes on Client Meetings
+
+- [Sprint 3](https://helsinkifi-my.sharepoint.com/:w:/r/personal/jermusto_ad_helsinki_fi/_layouts/15/Doc.aspx?sourcedoc=%7BF6416D50-5564-4C23-BFCC-43CD16CF5117%7D&file=client%20meeting%20sprint%203.docx&action=default&mobileredirect=true)
