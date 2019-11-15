@@ -20,3 +20,11 @@ If you prefer using Netbeans IDE, you will need at least version Netbeans 11. Yo
 Just follow the steps 1-4 in that guideline.
 
 Make sure that you have all the necessary plugins installed. Among others, you will need at least the following plugins: Groovy (contains gradle) and JavaFX 2.
+
+- try
+>- try1
+>>- try2
+
+- try3
+>- try4
+>>- try5
