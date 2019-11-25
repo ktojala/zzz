@@ -42,7 +42,7 @@ Monday 10-09
   - alaotsake3
   
 **file3**
-  - alaotsake4
+..* alaotsake4
 
 **file4**
   - alaotsake4
